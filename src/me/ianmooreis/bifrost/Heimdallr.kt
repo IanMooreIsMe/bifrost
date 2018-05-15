@@ -31,7 +31,6 @@ class Heimdallr(private val prefix: String) : ListenerAdapter() {
                             "- Run this command again in the partner channel to get the `Bifrost:ID` to put in this channel's topic.")
                 }
                 "status" -> {
-                    println("succ")
                     val receiver: BridgeReceiver = receiverCache.getOrPut(event.channel) {
                         BridgeReceiver(event.channel)
                     }
@@ -67,6 +66,5 @@ class Heimdallr(private val prefix: String) : ListenerAdapter() {
             receiverCache.remove(oldPartnership.channel)
         }
         receiverCache[event.channel] = BridgeReceiver(event.channel)
-        println(receiverCache)
     }
 }
