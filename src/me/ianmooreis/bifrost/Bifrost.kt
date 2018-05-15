@@ -3,12 +3,12 @@ package me.ianmooreis.bifrost
 import net.dv8tion.jda.core.AccountType
 import net.dv8tion.jda.core.JDABuilder
 
-object Bifrost : JDABuilder(AccountType.BOT) {
+class Bifrost(token: String, prefix: String) : JDABuilder(AccountType.BOT) {
     init {
-        this.setToken(System.getenv("DISCORD_TOKEN")).addEventListener(Heimdallr)
+        this.setToken(token).addEventListener(Heimdallr(prefix))
     }
 }
 
 fun main(args: Array<String>) {
-    Bifrost.buildAsync()
+    Bifrost(token = System.getenv("DISCORD_TOKEN") ?: args[0], prefix = "bf->").buildAsync()
 }
