@@ -1,5 +1,5 @@
 ![GitHub](https://img.shields.io/github/license/yttrian/bifrost)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yttrian/bifrost/Java%20CI)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yttrian/bifrost/Java%20CI/master)
 ![GitHub All Releases](https://img.shields.io/github/downloads/yttrian/bifrost/total)
 
 # bifrost
